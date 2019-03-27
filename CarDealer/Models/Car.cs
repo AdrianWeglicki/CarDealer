@@ -16,7 +16,7 @@ namespace CarDealer.Models
         public string FuelType { get; set; }
         public string EnginePower { get; set; }
         public string Description { get; set; }
-        public string Price { get; set; }
+        public int Price { get; set; }
         public string PhotoUrl { get; set; }
         public string ThumbnailUrl { get; set; }
         public bool IsCarOfTheWeek { get; set; }
