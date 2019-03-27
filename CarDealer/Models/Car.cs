@@ -20,6 +20,7 @@ namespace CarDealer.Models
         public string PhotoUrl { get; set; }
         public string ThumbnailUrl { get; set; }
         public bool IsCarOfTheWeek { get; set; }
+        public bool UsedCar { get; set; }
 
         public Car()
         {
