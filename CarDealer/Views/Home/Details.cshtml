@@ -1,0 +1,14 @@
+﻿@model Car
+
+<h2>@Model.Brand - @Model.Model</h2>
+<div class="img-thumbnail">
+    <img class="img-fluid" src="@Model.ThumbnailUrl" alt="@Model.Brand"  />
+    <figure class="figure-caption">
+        <h3 class="float-right">@Model.Price</h3>
+        <h4>@Model.YearOfProduction</h4>
+        <h4>@Model.Kilometers</h4>
+        <h4>@Model.EngineSize</h4>
+        <h4>@Model.EnginePower</h4>
+        <h4>@Model.Description</h4>
+    </figure>
+</div>

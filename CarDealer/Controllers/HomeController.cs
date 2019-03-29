@@ -29,5 +29,14 @@ namespace CarDealer.Controllers
         
             return View(homeVM);
         }
+        public IActionResult Details(int id)
+        {
+            var car = carRepository.getCarById(id);
+            if(car == null)
+            {
+                return NotFound();
+            }
+            return View(car);
+        }
     }
 }

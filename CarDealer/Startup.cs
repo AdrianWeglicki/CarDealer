@@ -1,4 +1,5 @@
 ﻿using CarDealer.Models;
+using CarDealer.Models.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace CarDealer
         {
             services.AddDbContext<AppDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICarRepository, CarRepository>();
+            services.AddTransient<IOpinionRepository, OpinionRepository>();
             services.AddMvc();
         }
 
@@ -31,7 +33,12 @@ namespace CarDealer
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default", 
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

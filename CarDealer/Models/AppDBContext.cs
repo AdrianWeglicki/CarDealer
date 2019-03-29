@@ -9,6 +9,7 @@ namespace CarDealer.Models
         {
         }
         public DbSet<Car> Cars  { get; set; }
+        public DbSet<Opinion> Opinions { get; set; }
 
     }
 }

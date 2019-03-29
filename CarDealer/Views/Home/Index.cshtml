@@ -1,4 +1,4 @@
-﻿@model CarDealer.ViewModels.HomeVM
+﻿@model HomeVM
 
 <div class="container">
     <h2>@Model.Title</h2>
@@ -7,24 +7,25 @@
 {
         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <figure class="img-thumbnail">
-                <img class="img-thumbnail img-fluid" src="@car.ThumbnailUrl" alt="" />
-
-                <div class="mdb-lightbox">
-                    <h5 class="float-right">@car.Price.ToString("c")</h5>
-                    <h5>
-                        @car.Brand - @car.Model - @car.YearOfProduction
-                    </h5>
-                    <h5>
-                        Kilometers : @car.Kilometers
-                    </h5>
-                    <h5>
-                        Engine Size : @car.EngineSize
-                    </h5>
-                    <h5>
-                        Engine Power : @car.EnginePower
-                    </h5>
-                    <p>@car.Description</p>
-                </div>
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@car.Id">
+                        <img class="img-thumbnail img-fluid" src="@car.ThumbnailUrl" alt="" />
+                    </a>
+                    <div class="mdb-lightbox">
+                        <h5 class="float-right">@car.Price.ToString("c")</h5>
+                        <h5>
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@car.Id">@car.Brand</a> - @car.Model - @car.YearOfProduction
+                        </h5>
+                        <h5>
+                            Kilometers : @car.Kilometers
+                        </h5>
+                        <h5>
+                            Engine Size : @car.EngineSize
+                        </h5>
+                        <h5>
+                            Engine Power : @car.EnginePower
+                        </h5>
+                        <p>@car.Description</p>
+                    </div>
             </figure>
         
         </div>

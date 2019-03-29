@@ -20,7 +20,7 @@ namespace CarDealer.Models
                          EnginePower = "421 KM",
                          Description = "Used car to sell",
                          Price = 120000,
-                         PhotoUrl = "",
+                         PhotoUrl = "/images/mustang.jpg",
                          ThumbnailUrl = "/images/mustang.jpg",
                          IsCarOfTheWeek = true
                      },
@@ -35,7 +35,7 @@ namespace CarDealer.Models
                     EnginePower = "421 KM",
                     Description = "Used car to sell",
                     Price = 160000,
-                    PhotoUrl = "",
+                    PhotoUrl = "/images/audia5.jpg",
                     ThumbnailUrl = "/images/audia5.jpg",
                     IsCarOfTheWeek = true
                 },
@@ -50,7 +50,7 @@ namespace CarDealer.Models
                     EnginePower = "421 KM",
                     Description = "Used car to sell",
                     Price = 30000,
-                    PhotoUrl = "",
+                    PhotoUrl = "/images/volvo.jpg",
                     ThumbnailUrl = "/images/volvo.jpg",
                     IsCarOfTheWeek = true
                 },
@@ -65,7 +65,7 @@ namespace CarDealer.Models
                     EnginePower = "421 KM",
                     Description = "Used car to sell",
                     Price = 30000,
-                    PhotoUrl = "",
+                    PhotoUrl = "/images/audia5.jpg",
                     ThumbnailUrl = "/images/audia5.jpg",
                     IsCarOfTheWeek = true
                 },
@@ -80,8 +80,23 @@ namespace CarDealer.Models
                     EnginePower = "421 KM",
                     Description = "Used car to sell",
                     Price = 30000,
-                    PhotoUrl = "",
+                    PhotoUrl = "/images/volvo.jpg",
                     ThumbnailUrl = "/images/volvo.jpg",
+                    IsCarOfTheWeek = true
+                },
+                new Car
+                {
+                    Brand = "Ford",
+                    Model = "Mustang",
+                    YearOfProduction = 2016,
+                    Kilometers = "34 000 km",
+                    EngineSize = "4 900 cm3",
+                    FuelType = "Diesel",
+                    EnginePower = "421 KM",
+                    Description = "Used car to sell",
+                    Price = 120000,
+                    PhotoUrl = "/images/mustang.jpg",
+                    ThumbnailUrl = "/images/mustang.jpg",
                     IsCarOfTheWeek = true
                 });
             
