@@ -19,7 +19,7 @@ namespace CarDealer.Controllers
 
         public IActionResult Index()
         {
-            var cars = carRepository.getAllCars().OrderBy(s => s.Brand);
+            var cars = carRepository.GetAllCars().OrderBy(s => s.Brand);
 
             var homeVM = new HomeVM()
             {
@@ -31,7 +31,7 @@ namespace CarDealer.Controllers
         }
         public IActionResult Details(int id)
         {
-            var car = carRepository.getCarById(id);
+            var car = carRepository.GetCarById(id);
             if(car == null)
             {
                 return NotFound();

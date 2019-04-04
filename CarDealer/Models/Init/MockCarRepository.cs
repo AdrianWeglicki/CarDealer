@@ -42,12 +42,12 @@ namespace CarDealer.Models
             };
         }
 
-        public IEnumerable<Car> getAllCars()
+        public IEnumerable<Car> GetAllCars()
         {
             return cars;
         }
 
-        public Car getCarById(int id)
+        public Car GetCarById(int id)
         {
             return cars.FirstOrDefault(s => s.Id == id);
         }

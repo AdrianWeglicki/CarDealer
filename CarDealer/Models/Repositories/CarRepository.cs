@@ -12,12 +12,12 @@ namespace CarDealer.Models
             this.appDBContext = appDBContext;
         }
 
-        public IEnumerable<Car> getAllCars()
+        public IEnumerable<Car> GetAllCars()
         {
             return appDBContext.Cars;
         }
 
-        public Car getCarById(int id)
+        public Car GetCarById(int id)
         {
             return appDBContext.Cars.FirstOrDefault(c => c.Id == id);
         }

@@ -4,7 +4,7 @@ namespace CarDealer.Models
 {
     public interface ICarRepository
     {
-        IEnumerable<Car> getAllCars();
-        Car getCarById(int id);
+        IEnumerable<Car> GetAllCars();
+        Car GetCarById(int id);
     }
 }
