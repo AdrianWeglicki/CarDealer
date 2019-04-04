@@ -1,108 +1,69 @@
 ﻿@model IEnumerable<CarDealer.Models.Car>
 
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
 <h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+
+<table class="table" style="background-color: azure">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Model)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.YearOfProduction)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Kilometers)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EngineSize)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FuelType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EnginePower)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhotoUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ThumbnailUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsCarOfTheWeek)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UsedCar)
-            </th>
-            <th></th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>YearOfProduction</th>
+            <th>Kilometers</th>
+            <th>EngineSize</th>
+            <th>FuelType</th>
+            <th>EnginePower</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>PhotoUrl</th>
+            <th>ThumbnailUrl</th>
+            <th><a asp-action="Create" class="btn btn-success btn-sm">Create New</a></th>
         </tr>
     </thead>
+
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YearOfProduction)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Kilometers)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EngineSize)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FuelType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnginePower)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ThumbnailUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsCarOfTheWeek)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UsedCar)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YearOfProduction)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kilometers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EngineSize)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FuelType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnginePower)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhotoUrl)
+                </td>
+                <td>
+                   <img src="@item.ThumbnailUrl" height="90" width="100" />
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

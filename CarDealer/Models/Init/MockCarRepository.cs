@@ -51,5 +51,20 @@ namespace CarDealer.Models
         {
             return cars.FirstOrDefault(s => s.Id == id);
         }
+
+        public void AddCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void EditCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
